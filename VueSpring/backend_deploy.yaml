@@ -21,7 +21,7 @@ spec:
         app: backend
     spec:
       containers:
-      - image: puwanatboy/backend:v3.0
+      - image: puwanatboy/backend:v4.0
         imagePullPolicy: IfNotPresent
         name: backend
       dnsPolicy: ClusterFirst

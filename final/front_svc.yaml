@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-06-21T15:03:33Z"
+  labels:
+    app: front
+  name: front
+  namespace: default
+  resourceVersion: "16459"
+  selfLink: /api/v1/namespaces/default/services/front
+  uid: 96da167b-a102-4bdc-ab91-7a42db1f9b11
+spec:
+  clusterIP: 10.105.142.50
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 30205
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: front
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 172.17.0.201
